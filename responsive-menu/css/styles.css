@@ -1,0 +1,118 @@
+* { /** Override certain user-agent styles **/
+    box-sizing: border-box; /** Not a CSS inherited property **/
+    margin: 0;
+}
+
+.small-title {
+  display: none;
+}
+
+header {
+  font-size: 200%;
+  text-align: center;
+}
+
+body {
+  background-color: lightgoldenrodyellow;
+  margin: 1em;
+  
+}
+
+.chicken .card-label{
+  background-color:orange;
+}
+
+.beef .card-label{
+  background-color:purple;
+}
+
+.sushi .card-label{
+  background-color: salmon;
+}
+
+.card-label {
+  display: block;
+  clear: both;
+  border: 2px solid black;
+  float: right;
+  position: relative;
+  text-align: center;
+  top: -2px;
+  right: -2px;
+  width: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card {
+  border: 2px solid black;
+  float: left;
+  position: relative;
+  background-color: #FFFFF0;
+}
+
+.card-info {
+  clear: both;
+  padding: 1em;
+  overflow: auto;
+  float: left;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .col-lg-3 {
+    width: 33.33%;
+  }
+  body {
+    background-color: lightgreen;
+  }
+}
+  
+  
+  /********** Medium devices only **********/
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .col-nd-1 {
+      width: 100%;
+    }
+    .col-md-2 {
+      width: 50%;
+    }
+    body {
+      background-color: lightcoral;
+    }
+  }
+
+/******** Small devices only *********/
+@media (max-width: 991px) {
+  .small-title {
+    display: block;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 100%;
+    text-align: left;
+  }
+  .big-title {
+    display: none;
+  }
+  .col-sm-1 {
+    width: 100%;
+  }
+  .card-info {
+    display: block;
+    overflow: auto;
+    height: 100px;
+    clear: both;
+  }
+
+  .card:hover .card-info {
+    cursor: ns-resize;
+  }
+
+  body {
+    background-color: lightblue;
+  }
+  .card-label {
+    right: 0;
+    width: 100%;
+    clear: both;
+  }
+}
