@@ -1,40 +1,45 @@
 * { /** Override certain user-agent styles **/
     box-sizing: border-box; /** Not a CSS inherited property **/
     margin: 0;
+    padding: 0;
 }
-
-.small-title {
-  display: none;
+body {
+  margin: 1em;
 }
-
 header {
   font-size: 200%;
   text-align: center;
 }
-
-body {
-  background-color: lightgoldenrodyellow;
-  margin: 1em;
-  
+.container {
+  float: left;
+}
+.spacing {
+  padding: 1em;
+}
+.small-title {
+  display: none;
 }
 
 .chicken .card-label{
   background-color:orange;
 }
-
 .beef .card-label{
   background-color:purple;
 }
-
 .sushi .card-label{
   background-color: salmon;
 }
 
+.card {
+  border: 2px solid black;
+  position: relative;
+  background-color: #FFFFF0;
+}
+
 .card-label {
   display: block;
-  clear: both;
-  border: 2px solid black;
   float: right;
+  border: 2px solid black;
   position: relative;
   text-align: center;
   top: -2px;
@@ -44,24 +49,18 @@ body {
   margin-bottom: 0;
 }
 
-.card {
-  border: 2px solid black;
-  float: left;
-  position: relative;
-  background-color: #FFFFF0;
-}
-
 .card-info {
-  clear: both;
   padding: 1em;
   overflow: auto;
-  float: left;
+  height: 100px;
+  clear: both;
 }
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .col-lg-3 {
     width: 33.33%;
+    display: inline-block;
   }
   body {
     background-color: lightgreen;
@@ -98,8 +97,6 @@ body {
   }
   .card-info {
     display: block;
-    overflow: auto;
-    height: 100px;
     clear: both;
   }
 
