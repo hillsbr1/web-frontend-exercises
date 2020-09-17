@@ -51,9 +51,19 @@ header {
 
 .card-info {
   padding: 1em;
-  overflow: auto;
-  height: 100px;
+  overflow: hidden;
+  height: 90px;
   clear: both;
+}
+
+.card:hover .card-info {
+  cursor: ns-resize;
+  overflow: auto;
+
+}
+
+.small-device-extra-info {
+  display: none;
 }
 
 /********** Large devices only **********/
@@ -100,10 +110,6 @@ header {
     clear: both;
   }
 
-  .card:hover .card-info {
-    cursor: ns-resize;
-  }
-
   body {
     background-color: lightblue;
   }
@@ -111,5 +117,9 @@ header {
     right: 0;
     width: 100%;
     clear: both;
+  }
+  .small-device-extra-info {
+    display: inline;
+    font-style: italic;
   }
 }
