@@ -1,14 +1,27 @@
 
 .chicken {
-  background-color:orange;
+  background-color:#ffc251;
+  border: 2px solid #ffb52d;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .beef {
-  background-color:purple;
+  background-color:#ffa8a8;
+  border: 2px solid #ff8e8e;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .sushi {
-  background-color: salmon;
+  background-color: #8fc9c9;
+  border: 2px solid #6cc9c9;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 #nav-list {
   background-color:darkgray;
+}
+
+.card {
+  border-radius: 10px;
 }
