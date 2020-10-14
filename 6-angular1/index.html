@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Lunch Items</title>
+</head>
+<body ng-app="LunchCheck">
+    <h1>Lunch Check App</h1>
+    <div ng-controller="LunchCheckController">
+        <!-- An empty item between commas is not considered an item -->
+        <input type="text" ng-model="lunchItems" placeholder="Enter the items you ate for lunch" />
+        <button ng-click="submit();">Hit me!</button>
+        <div class="output {{isValid}}" >{{output}}</div>
+    </div>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

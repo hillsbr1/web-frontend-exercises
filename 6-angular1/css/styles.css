@@ -1,0 +1,17 @@
+body {
+  margin: 2em;
+}
+.output {
+  background-color: #eef;
+  width: 400px;
+  height: 100px;
+  border: 2px solid blue;
+}
+.valid {
+  color: green;
+  border-color: green;
+}
+.invalid {
+  border-color: red;
+  color: red;
+}
