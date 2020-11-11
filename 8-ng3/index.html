@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Using $http Service</title>
+  </head>
+  <body>
+    <h1>Narrowing It Down App</h1>
+
+    <div ng-controller='NarrowItDownController as list'>
+      <input type="text" ng-model="list.searchTerm" placeholder="search text">
+      <button ng-click="list.getMatchedMenuItems(list.searchTerm);">Narrow It Down For Me!</button>  
+      <found-items found="list.found" on-remove="list.removeItem(index)"></found-items>
+    </div>
+
+  </body>
+</html>
