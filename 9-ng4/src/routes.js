@@ -21,23 +21,22 @@
     
       .state('categories', {
         url: '/categories',
-        templateUrl: 'src/menu/templates/menu-categories.template.html',
-        controller: 'CategoriesController as controller',
+        templateUrl: 'src/menu/templates/categories.template.html',
+        controller: 'CategoriesController as catsController',
         resolve: {
-          items: ['MenuDataService', function (MenuDataService) {
+          cats: ['MenuDataService', function (MenuDataService) {
             return MenuDataService.getAllCategories();
           }]
         }
       })
 
       .state('items', {
-        url: '/items',
-        templateUrl: 'src/menu/templates/menu-items.template.html',
-        controller: 'ItemsController as controller',
+        url: '/items/{categoryShortName}',
+        templateUrl: 'src/menu/templates/items.template.html',
+        controller: 'ItemsListController as itemsController',
         resolve: {
-          items: ['MenuDataService', function (MenuDataService) {
-            var shortName = '';
-            return MenuDataService.getItemsForCategory(shortName);
+          itemsForCat: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+            return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
           }]
         }
       })

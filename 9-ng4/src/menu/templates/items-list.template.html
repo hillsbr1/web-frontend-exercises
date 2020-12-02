@@ -1,0 +1,12 @@
+<ul>
+    <li ng-repeat="item in $ctrl.itemsForCat">
+        <!-- ui-sref="mainList.itemDetail({itemId: $index})"> -->
+        ID: {{ item.id }} 
+        Name: {{item.name }}
+        Short name:{{ item.short_name }}
+        Description: {{ item.description }}
+        Pirce small: {{ item.price_small }}
+        Price large: {{ item.price_large }}
+    </li>
+</ul>
+  
