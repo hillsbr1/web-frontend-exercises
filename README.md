@@ -1,6 +1,6 @@
 ## Welcome to the Web-frontend-exercises repository
 
-[Project 9 AngularJS UI Router Deployment] https://brianhillsley.github.io/web-frontend-exercises/9-ng4/
+[Project 9 AngularJS UI Router Deployment] (https://brianhillsley.github.io/web-frontend-exercises/9-ng4/)
 
 [Week 2: Project 1 Responsive CSS Design for Menu](https://brianhillsley.github.io/web-frontend-exercises/2-responsive-css-menu/)
 
