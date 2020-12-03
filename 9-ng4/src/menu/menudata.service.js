@@ -31,9 +31,21 @@
                 url: "https://davids-restaurant.herokuapp.com/menu_items.json"
             }).then(function (result) { 
                 console.log(result.data);
-                return result.data.menu_items.filter((item)=>{
+                var filtered = result.data.menu_items.filter((item)=>{
                     return item.short_name.indexOf(categoryShortName) !== -1;
                 });
+                console.log(filtered);
+                return filtered;
+            });
+        };
+
+        service.getSpecificItem = function(itemShortName) {
+        return $http({
+                method: "GET",
+                url: "https://www.davidchuschinabistro.com/menu_items/"+itemShortName+".json"
+            }).then(function (result) { 
+                console.log(result.data);
+                return result.data;
             });
         };
 

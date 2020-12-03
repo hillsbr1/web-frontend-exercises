@@ -32,11 +32,22 @@
 
       .state('items', {
         url: '/items/{categoryShortName}',
-        templateUrl: 'src/menu/templates/items.template.html',
-        controller: 'ItemsListController as itemsController',
+        templateUrl: 'src/menu/templates/items-list.template.html',
+        controller: 'ItemsListController as itemsListController',
         resolve: {
           itemsForCat: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
             return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
+          }]
+        }
+      })
+
+      .state('item', {
+        url: '/item/{shortName}',
+        templateUrl: 'src/menu/templates/item-detail.template.html',
+        controller: 'ItemDetailController as itemDetailController',
+        resolve: {
+          item: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+            return MenuDataService.getSpecificItem($stateParams.shortName);
           }]
         }
       })
