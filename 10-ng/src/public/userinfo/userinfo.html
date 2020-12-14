@@ -1,0 +1,15 @@
+<div ng-if="ctrl.signedUp">
+    Your registered information:
+
+    <p>{{ ctrl.user.first }}</p>
+    <p>{{ ctrl.user.last }}</p>
+    <p>{{ ctrl.user.email }}</p>
+    <p>{{ ctrl.user.phone }}</p>
+    <p>{{ ctrl.user.favdish }}</p>
+    <p>TODO: Favdish title</p>
+    <p>TODO: Favdish description</p>
+    <p>TODO: Favdish picture</p>
+  </div>
+  <div ng-if="!ctrl.signedUp">
+    Not Signed Up Yet.
+  </div>
