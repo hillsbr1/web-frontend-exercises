@@ -37,7 +37,9 @@ function MenuService($http, ApiPath) {
       return response.data;
     });
   };
-
+  service.getItemByShortName = function(shortName) {
+    return $http.get("https://eily.herokuapp.com/menu_items/"+shortName+".json");
+  }
 }
 
 

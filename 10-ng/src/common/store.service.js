@@ -18,7 +18,8 @@ function StoreService() {
         service.data.last = userInfo.last;
         service.data.email = userInfo.email;
         service.data.phone = userInfo.phone;
-        service.data.favoriteItem = userInfo.favoriteItem;
+        service.data.favdish = userInfo.favdish;
+        service.data.favItem = userInfo.favItem;
         }
 
     service.getData = function() {

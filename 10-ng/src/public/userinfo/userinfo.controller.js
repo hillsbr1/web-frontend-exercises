@@ -17,14 +17,16 @@
         infoCtrl.user.last = "last has not been set";
         infoCtrl.user.email = "email has not been set";
         infoCtrl.user.phone = "phone has not been set";
-        infoCtrl.user.favdish = "favdish has not been set";   
+        infoCtrl.user.favdish = "favdish has not been set";
+        infoCtrl.user.favItem = {};
         
         if (infoCtrl.signedUp) {
             infoCtrl.user.first = data.first;
             infoCtrl.user.last = data.last;
             infoCtrl.user.email = data.email;
             infoCtrl.user.phone = data.phone;
-            infoCtrl.user.favdish = data.favdish;   
+            infoCtrl.user.favItem = data.favItem;   
+            infoCtrl.user.favdish = data.favdish;
         }
     }
     })();

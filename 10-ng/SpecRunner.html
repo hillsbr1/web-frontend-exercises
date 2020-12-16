@@ -12,12 +12,47 @@
   <script src="lib/jasmine-2.4.1/boot.js"></script>
 
   <!-- include source files here... -->
-  <script src="src/CookieDetector.js"></script>
-  <script src="src/OddEven.js"></script>
+   <!-- Libs -->
+   <script src="lib/jquery-2.1.4.min.js"></script>
+   <script src="lib/bootstrap.min.js"></script>
+   <script src="lib/angular.js"></script>
+   <script src="lib/angular-ui-router.js"></script>
+   <script src="lib/angular-mocks.js"></script>
+
+
+   <!-- Main Restaurant Module -->
+   <script src="src/restaurant.module.js"></script>
+
+   <!-- Sign Up Module -->
+   <script src="src/public/signup/signup.module.js"></script>
+   <script src="src/public/signup/signup.routes.js"></script>
+   <script src="src/public/signup/signup.controller.js"></script>
+
+   <!-- User Info Module -->
+   <script src="src/public/userinfo/userinfo.module.js"></script>
+   <script src="src/public/userinfo/userinfo.routes.js"></script>
+   <script src="src/public/userinfo/userinfo.controller.js"></script>
+   <script src="src/public/userinfo/userinfo.favitem.component.js"></script>
+
+   <!-- Common Module -->
+   <script src="src/common/common.module.js"></script>
+   <script src="src/common/loading/loading.component.js"></script>
+   <script src="src/common/loading/loading.interceptor.js"></script>
+   <script src="src/common/menu.service.js"></script>
+   <script src="src/common/store.service.js"></script>
+
+   <!-- Public Module -->
+   <script src="src/public/public.module.js"></script>
+   <script src="src/public/public.routes.js"></script>
+   <script src="src/public/menu/menu.controller.js"></script>
+   <script src="src/public/menu-category/menu-category.component.js"></script>
+   <script src="src/public/menu-items/menu-items.controller.js"></script>
+   <script src="src/public/menu-item/menu-item.component.js"></script>
+
 
   <!-- include spec files here... -->
-  <script src="spec/CookieDetector.spec.js"></script>
-  <script src="spec/OddEven.spec.js"></script>
+  <script src="spec/menu.service.spec.js"></script>
+
 
 </head>
 

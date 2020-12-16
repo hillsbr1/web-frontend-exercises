@@ -1,15 +1,14 @@
-<div ng-if="ctrl.signedUp">
+<h2 id="menu-categories-title" class="text-center">My Info</h2>
+<div ng-if="ctrl.signedUp" class="text-center">
     Your registered information:
-
-    <p>{{ ctrl.user.first }}</p>
-    <p>{{ ctrl.user.last }}</p>
-    <p>{{ ctrl.user.email }}</p>
-    <p>{{ ctrl.user.phone }}</p>
-    <p>{{ ctrl.user.favdish }}</p>
-    <p>TODO: Favdish title</p>
-    <p>TODO: Favdish description</p>
-    <p>TODO: Favdish picture</p>
+  <div>
+    <p>First name: {{ ctrl.user.first }}</p>
+    <p>Last name: {{ ctrl.user.last }}</p>
+    <p>Email: {{ ctrl.user.email }}</p>
+    <p>Phone: {{ ctrl.user.phone }}</p>
+    <p>Favorite dish: {{ ctrl.user.favdish }}</p>
+    <favitem ng-if="ctrl.signedUp" menu-item="ctrl.user.favItem"></favitem>
   </div>
-  <div ng-if="!ctrl.signedUp">
-    Not Signed Up Yet.
+  <div ng-if="!ctrl.signedUp" class="text-center">
+    Not Signed Up Yet. <a ui-sref="signup">Sign up Now!</a>
   </div>
