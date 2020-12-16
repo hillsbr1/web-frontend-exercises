@@ -1,4 +1,7 @@
 <h2 id="menu-categories-title" class="text-center">My Info</h2>
+<div ng-if="!ctrl.signedUp" class="text-center">
+  Not Signed Up Yet. <a ui-sref="signup">Sign up Now!</a>
+</div>
 <div ng-if="ctrl.signedUp" class="text-center">
     Your registered information:
   <div>
